@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madre M - Platforma Edukacyjna Matematyki</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%233E3E3E' rx='6'/><g fill='%23609CFF'><rect x='6' y='8' width='5' height='4' rx='1'/><rect x='13' y='8' width='5' height='4' rx='1'/><rect x='6' y='20' width='5' height='4' rx='1'/><rect x='13' y='20' width='5' height='4' rx='1'/></g></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="sticky-header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="polygon"></div>
+                    <div class="polygon rotated"></div>
+                    <div class="polygon"></div>
+                    <div class="polygon rotated"></div>
+                </div>
+            </div>
+            <div class="brand-title">Madre M</div>
+            <nav class="main-navigation">
+                <button class="nav-button active" data-page="courses">Kursy</button>
+                <button class="nav-button" data-page="ai">Madre AI</button>
+                <button class="nav-button" data-page="premium">Madre Premium</button>
+                <button class="nav-button logout">Wyloguj się</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+        <!-- Courses Page -->
+        <div id="courses-page" class="page active">
+            <div class="page-header">
+                <button class="back-button">
+                    <div class="arrow-left"></div>
+                    <span>Powrót</span>
+                </button>
+                <h1 class="page-title">MOJE KURSY</h1>
+            </div>
+            
+            <div class="courses-list">
+                <div class="course-card" data-course="basics">
+                    <div class="course-content">
+                        <h3 class="course-title">BASICS - Fundamenty Matematyki</h3>
+                        <p class="course-description">Arytmetyka, algebra, geometria, funkcje - start od zera</p>
+                    </div>
+                    <div class="course-arrow">
+                        <span class="course-count">12 tematów</span>
+                        <div class="arrow-right"></div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-course="advanced">
+                    <div class="course-content">
+                        <h3 class="course-title">Matematyka rozszerzona</h3>
+                        <p class="course-description">Zaawansowana algebra, geometria, funkcje</p>
+                    </div>
+                    <div class="course-arrow">
+                        <span class="course-count">2 tematy</span>
+                        <div class="arrow-right"></div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-course="extended-tasks">
+                    <div class="course-content">
+                        <h3 class="course-title">Zadania maturalne - Matematyka rozszerzona</h3>
+                        <p class="course-description">Zadania z arkuszy maturalnych wg poszczególnych działów</p>
+                    </div>
+                    <div class="course-arrow">
+                        <span class="course-count">2 tematy</span>
+                        <div class="arrow-right"></div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-course="matura-2025">
+                    <div class="course-content">
+                        <h3 class="course-title">Matura 2025 - Poziom podstawowy</h3>
+                        <p class="course-description">Wszystkie sesje egzaminacyjne 2025 - poziom podstawowy</p>
+                    </div>
+                    <div class="course-arrow">
+                        <span class="course-count">2 tematy</span>
+                        <div class="arrow-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Matura Basic Page -->
+        <div id="matura-basic-page" class="page">
+            <div class="page-header">
+                <button class="back-button">
+                    <div class="arrow-left"></div>
+                    <span>Powrót</span>
+                </button>
+                <h1 class="page-title">Matura podstawowa - Matematyka</h1>
+                
+                <div class="progress-section">
+                    <div class="progress-text">
+                        <span>Postęp</span>
+                        <span class="progress-count">0 z 31 zadań</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 3%"></div>
+                    </div>
+                </div>
+
+                <div class="navigation-tabs">
+                    <button class="tab-button active" data-tab="suggested">Sugerowane zadania</button>
+                    <button class="tab-button" data-tab="all-tasks">Wszystkie zadania (31)</button>
+                </div>
+            </div>
+
+            <!-- Suggested Tasks Tab -->
+            <div id="suggested-tab" class="tab-content active">
+                <div class="info-banner">
+                    <p class="info-text">Zacznij od tego zadania, a resztę dobierzemy specjalnie dla Ciebie</p>
+                    <p class="info-title">Zacznij tutaj</p>
+                </div>
+
+                <div class="task-card featured">
+                    <div class="task-content">
+                        <div class="task-tags">
+                            <span class="tag blue">Maj 2025</span>
+                            <span class="tag purple">Zadanie otwarte</span>
+                            <span class="tag orange">2 pkt</span>
+                            <span class="tag gray">Dowodzenie własności liczbowych</span>
+                        </div>
+                        <div class="task-question">
+                            <span class="question-text">Wykaż, że dla każdej nieparzystej liczby naturalnej </span>
+                            <span class="variable">𝒏</span>
+                            <span class="question-text"> liczba </span>
+                            <span class="variable">𝟑𝒏 + 𝟐𝒏 + 𝟕</span>
+                            <span class="question-text"> jest podzielna przez </span>
+                            <span class="variable">𝟒</span>
+                            <span class="question-text">.</span>
+                        </div>
+                    </div>
+                    <div class="task-arrow">
+                        <span class="steps-count">10 kroków</span>
+                        <div class="arrow-right"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Tasks Tab -->
+            <div id="all-tasks-tab" class="tab-content">
+                <div class="search-section">
+                    <div class="search-box">
+                        <div class="search-icon">🔍</div>
+                        <input type="text" placeholder="Szukaj" class="search-input">
+                    </div>
+                </div>
+
+                <div class="info-banner">
+                    <p class="info-text">Wybierz dowolny dział</p>
+                    <p class="info-title">Lista zadań wg działów</p>
+                </div>
+
+                <div class="topics-list">
+                    <div class="topic-card" data-topic="logarithms">
+                        <div class="topic-content">
+                            <h3 class="topic-title">Logarytmy</h3>
+                        </div>
+                        <div class="topic-arrow">
+                            <span class="topic-count">1 zadanie</span>
+                            <div class="arrow-right"></div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card" data-topic="number-proofs">
+                        <div class="topic-content">
+                            <h3 class="topic-title">Dowodzenie własności liczbowych</h3>
+                        </div>
+                        <div class="topic-arrow">
+                            <span class="topic-count">1 zadanie</span>
+                            <div class="arrow-right"></div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card" data-topic="sequences">
+                        <div class="topic-content">
+                            <h3 class="topic-title">Ciągi</h3>
+                        </div>
+                        <div class="topic-arrow">
+                            <span class="topic-count">1 zadanie</span>
+                            <div class="arrow-right"></div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card" data-topic="statistics">
+                        <div class="topic-content">
+                            <h3 class="topic-title">Średnia arytmetyczna i mediana</h3>
+                        </div>
+                        <div class="topic-arrow">
+                            <span class="topic-count">1 zadanie</span>
+                            <div class="arrow-right"></div>
+                        </div>
+                    </div>
+
+                    <div class="topic-card" data-topic="trigonometry">
+                        <div class="topic-content">
+                            <h3 class="topic-title">Tożsamości trygonometryczne</h3>
+                        </div>
+                        <div class="topic-arrow">
+                            <span class="topic-count">1 zadanie</span>
+                            <div class="arrow-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Number Proofs Topic Page -->
+        <div id="number-proofs-page" class="page">
+            <div class="page-header">
+                <button class="back-button">
+                    <div class="arrow-left"></div>
+                    <span>Powrót</span>
+                </button>
+                <h1 class="page-title">Matura podstawowa - Matematyka</h1>
+                
+                <div class="progress-section">
+                    <div class="progress-text">
+                        <span>Postęp</span>
+                        <span class="progress-count">0 z 31 zadań</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 3%"></div>
+                    </div>
+                </div>
+
+                <div class="navigation-tabs">
+                    <button class="tab-button" data-tab="suggested">Sugerowane zadania</button>
+                    <button class="tab-button" data-tab="all-tasks">Wszystkie zadania (31)</button>
+                    <div class="search-box">
+                        <div class="search-icon">🔍</div>
+                        <input type="text" placeholder="Szukaj" class="search-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="topic-header">
+                <div class="topic-breadcrumb">
+                    <span>Dowodzenie własności liczbowych (1 zadanie)</span>
+                    <div class="close-icon">×</div>
+                </div>
+            </div>
+
+            <div class="task-card">
+                <div class="task-content">
+                    <div class="task-tags">
+                        <span class="task-number">#1</span>
+                        <span class="tag blue">Maj 2025</span>
+                        <span class="tag purple">Zadanie otwarte</span>
+                        <span class="tag orange">2 pkt</span>
+                        <span class="tag gray">Dowodzenie własności liczbowych</span>
+                    </div>
+                    <div class="task-question">
+                        <span class="question-text">Wykaż, że dla każdej nieparzystej liczby naturalnej </span>
+                        <span class="variable">𝒏</span>
+                        <span class="question-text"> liczba </span>
+                        <span class="variable">𝟑𝒏 + 𝟐𝒏 + 𝟕</span>
+                        <span class="question-text"> jest podzielna przez </span>
+                        <span class="variable">𝟒</span>
+                        <span class="question-text">.</span>
+                    </div>
+                </div>
+                <div class="task-arrow">
+                    <span class="steps-count">10 kroków</span>
+                    <div class="arrow-right"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Matura 2025 Page -->
+        <div id="matura-2025-page" class="page">
+            <div class="page-header">
+                <button class="back-button">
+                    <div class="arrow-left"></div>
+                    <span>Powrót</span>
+                </button>
+                <h1 class="page-title">Matura 2025 - Poziom podstawowy</h1>
+                
+                <div class="progress-section">
+                    <div class="progress-text">
+                        <span>Postęp</span>
+                        <span class="progress-count">0 z 166 zadań</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 3%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-sessions">
+                <div class="session-card" data-session="march">
+                    <div class="session-content">
+                        <h3 class="session-title">Matura próbna - Marzec 2025</h3>
+                    </div>
+                    <div class="session-arrow">
+                        <span class="session-count">32 zadań</span>
+                        <div class="arrow-right"></div>
+                    </div>
+                </div>
+
+                <div class="session-card" data-session="april">
+                    <div class="session-content">
+                        <h3 class="session-title">Matura próbna - Kwiecień 2025</h3>
+                    </div>
+                    <div class="session-arrow">
+                        <span class="session-count">30 zadań</span>
+                        <div class="arrow-right"></div>
+                    </div>
+                </div>
+
+                <div class="session-card" data-session="may">
+                    <div class="session-content">
+                        <h3 class="session-title">Matura - Maj 2025</h3>
+                    </div>
+                    <div class="session-arrow">
+                        <span class="session-count">35 zadań</span>
+                        <div class="arrow-right"></div>
+                    </div>
+                </div>
+
+                <div class="session-card" data-session="june">
+                    <div class="session-content">
+                        <h3 class="session-title">Matura dodatkowa - Czerwiec 2025</h3>
+                    </div>
+                    <div class="session-arrow">
+                        <span class="session-count">34 zadań</span>
+                        <div class="arrow-right"></div>
+                    </div>
+                </div>
+
+                <div class="session-card" data-session="august">
+                    <div class="session-content">
+                        <h3 class="session-title">Matura poprawkowa - Sierpień 2025</h3>
+                    </div>
+                    <div class="session-arrow">
+                        <span class="session-count">35 zadań</span>
+                        <div class="arrow-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Madre AI Page -->
+        <div id="ai-page" class="page">
+            <div class="chat-container">
+                <div class="chat-history">
+                    <h3>Historia rozmów</h3>
+                    
+                    <div class="history-section">
+                        <h4>DZISIAJ</h4>
+                        <div class="chat-item active">
+                            <h5>Funkcje kwadratowe</h5>
+                            <p>Zadania z miejscami zerowymi</p>
+                        </div>
+                    </div>
+
+                    <div class="history-section">
+                        <h4>WCZORAJ</h4>
+                        <div class="chat-item">
+                            <h5>Geometria</h5>
+                            <p>Planimetria - pola figur</p>
+                        </div>
+                    </div>
+
+                    <button class="new-chat-button">+ Nowa rozmowa</button>
+                </div>
+
+                <div class="chat-main">
+                    <div class="chat-header">
+                        <h3>Asystent Madre AI</h3>
+                        <p>Zawsze gotowy do pomocy z matematyką</p>
+                    </div>
+
+                    <div class="chat-messages">
+                        <div class="message ai-message">
+                            <p>Cześć! Jestem Twoim AI asystentem do matematyki. Mogę pomóc Ci znaleźć zadania, wyjaśnić trudne pojęcia, lub zasugerować co ćwiczyć. O co chcesz zapytać?</p>
+                        </div>
+                    </div>
+
+                    <div class="chat-input">
+                        <input type="text" placeholder="Zapytaj AI..." class="message-input">
+                        <button class="send-button">
+                            <div class="send-icon">📤</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
